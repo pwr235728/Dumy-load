@@ -87,8 +87,8 @@ L Connector:Screw_Terminal_01x01 J1
 U 1 1 5CD7521C
 P 1600 1300
 F 0 "J1" V 1472 1379 50  0000 L CNN
-F 1 "Load +" V 1565 1379 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1600 1300 50  0001 C CNN
+F 1 "Ctrl +" V 1565 1379 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1600 1300 50  0001 C CNN
 F 3 "~" H 1600 1300 50  0001 C CNN
 	1    1600 1300
 	0    1    1    0   
@@ -98,8 +98,8 @@ L Connector:Screw_Terminal_01x01 J2
 U 1 1 5CD753E6
 P 1600 1550
 F 0 "J2" V 1566 1462 50  0000 R CNN
-F 1 "Load -" V 1473 1462 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1600 1550 50  0001 C CNN
+F 1 "Ctrl -" V 1473 1462 50  0000 R CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1600 1550 50  0001 C CNN
 F 3 "~" H 1600 1550 50  0001 C CNN
 	1    1600 1550
 	0    -1   -1   0   
@@ -163,17 +163,6 @@ Wire Wire Line
 	6950 1400 6950 1250
 Wire Wire Line
 	6950 1400 7150 1400
-$Comp
-L power:GND #PWR015
-U 1 1 5CD78686
-P 8700 1900
-F 0 "#PWR015" H 8700 1650 50  0001 C CNN
-F 1 "GND" H 8705 1725 50  0000 C CNN
-F 2 "" H 8700 1900 50  0001 C CNN
-F 3 "" H 8700 1900 50  0001 C CNN
-	1    8700 1900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR03
 U 1 1 5CD78A08
@@ -346,17 +335,15 @@ Wire Wire Line
 Connection ~ 2400 1650
 Wire Wire Line
 	2400 1650 2400 1700
-Wire Wire Line
-	10250 3850 10250 3700
 $Comp
 L Device:Q_NMOS_GDS Q4
 U 1 1 5CF1A45B
-P 10150 4050
-F 0 "Q4" H 10356 4097 50  0000 L CNN
-F 1 "Q_NMOS_GDS" H 10356 4004 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10350 4150 50  0001 C CNN
-F 3 "~" H 10150 4050 50  0001 C CNN
-	1    10150 4050
+P 9800 2750
+F 0 "Q4" H 10006 2797 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 10006 2704 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 10000 2850 50  0001 C CNN
+F 3 "~" H 9800 2750 50  0001 C CNN
+	1    9800 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -403,8 +390,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 9150 4050 50  0001 C CNN
 	1    9150 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9850 4050 9950 4050
 Wire Wire Line
 	9450 4050 9500 4050
 $Comp
@@ -548,39 +533,34 @@ Wire Wire Line
 	8800 5100 8800 4950
 Connection ~ 8800 5100
 Wire Wire Line
-	10250 4950 10250 4450
-Connection ~ 10250 4950
-Wire Wire Line
 	10050 5000 10100 5000
 Wire Wire Line
 	10100 5200 10050 5200
 $Comp
 L Device:R R8
 U 1 1 5CF1A4D7
-P 9950 4300
-F 0 "R8" H 9880 4253 50  0000 R CNN
-F 1 "10k" H 9880 4346 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9880 4300 50  0001 C CNN
-F 3 "~" H 9950 4300 50  0001 C CNN
-	1    9950 4300
+P 9600 3000
+F 0 "R8" H 9530 2953 50  0000 R CNN
+F 1 "10k" H 9530 3046 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9530 3000 50  0001 C CNN
+F 3 "~" H 9600 3000 50  0001 C CNN
+	1    9600 3000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9950 4150 9950 4050
-Connection ~ 9950 4050
+	9600 2850 9600 2750
+Connection ~ 9600 2750
 Wire Wire Line
 	10250 5250 10250 5600
-Wire Wire Line
-	7950 3850 7950 3700
 $Comp
 L Device:Q_NMOS_GDS Q3
 U 1 1 5CF3A753
-P 7850 4050
-F 0 "Q3" H 8056 4097 50  0000 L CNN
-F 1 "Q_NMOS_GDS" H 8056 4004 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8050 4150 50  0001 C CNN
-F 3 "~" H 7850 4050 50  0001 C CNN
-	1    7850 4050
+P 7500 2750
+F 0 "Q3" H 7706 2797 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 7706 2704 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7700 2850 50  0001 C CNN
+F 3 "~" H 7500 2750 50  0001 C CNN
+	1    7500 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -627,8 +607,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6850 4050 50  0001 C CNN
 	1    6850 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7550 4050 7650 4050
 Wire Wire Line
 	7150 4050 7200 4050
 $Comp
@@ -772,39 +750,34 @@ Wire Wire Line
 	6500 5100 6500 4950
 Connection ~ 6500 5100
 Wire Wire Line
-	7950 4950 7950 4450
-Connection ~ 7950 4950
-Wire Wire Line
 	7750 5000 7800 5000
 Wire Wire Line
 	7800 5200 7750 5200
 $Comp
 L Device:R R7
 U 1 1 5CF3A7CF
-P 7650 4300
-F 0 "R7" H 7580 4253 50  0000 R CNN
-F 1 "10k" H 7580 4346 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 4300 50  0001 C CNN
-F 3 "~" H 7650 4300 50  0001 C CNN
-	1    7650 4300
+P 7300 3000
+F 0 "R7" H 7230 2953 50  0000 R CNN
+F 1 "10k" H 7230 3046 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7230 3000 50  0001 C CNN
+F 3 "~" H 7300 3000 50  0001 C CNN
+	1    7300 3000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7650 4150 7650 4050
-Connection ~ 7650 4050
+	7300 2850 7300 2750
+Connection ~ 7300 2750
 Wire Wire Line
 	7950 5250 7950 5600
-Wire Wire Line
-	5650 3850 5650 3700
 $Comp
 L Device:Q_NMOS_GDS Q2
 U 1 1 5CF3CC06
-P 5550 4050
-F 0 "Q2" H 5756 4097 50  0000 L CNN
-F 1 "Q_NMOS_GDS" H 5756 4004 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5750 4150 50  0001 C CNN
-F 3 "~" H 5550 4050 50  0001 C CNN
-	1    5550 4050
+P 5200 2750
+F 0 "Q2" H 5406 2797 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 5406 2704 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 5400 2850 50  0001 C CNN
+F 3 "~" H 5200 2750 50  0001 C CNN
+	1    5200 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -851,8 +824,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4550 4050 50  0001 C CNN
 	1    4550 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 4050 5350 4050
 Wire Wire Line
 	4850 4050 4900 4050
 $Comp
@@ -996,37 +967,34 @@ Wire Wire Line
 	4200 5100 4200 4950
 Connection ~ 4200 5100
 Wire Wire Line
-	5650 4950 5650 4450
-Connection ~ 5650 4950
-Wire Wire Line
 	5450 5000 5500 5000
 Wire Wire Line
 	5500 5200 5450 5200
 $Comp
 L Device:R R6
 U 1 1 5CF3CC82
-P 5350 4300
-F 0 "R6" H 5280 4253 50  0000 R CNN
-F 1 "10k" H 5280 4346 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5280 4300 50  0001 C CNN
-F 3 "~" H 5350 4300 50  0001 C CNN
-	1    5350 4300
+P 5000 3000
+F 0 "R6" H 4930 2953 50  0000 R CNN
+F 1 "10k" H 4930 3046 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4930 3000 50  0001 C CNN
+F 3 "~" H 5000 3000 50  0001 C CNN
+	1    5000 3000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5350 4150 5350 4050
-Connection ~ 5350 4050
+	5000 2850 5000 2750
+Connection ~ 5000 2750
 Wire Wire Line
 	5650 5250 5650 5600
 $Comp
 L Device:Q_NMOS_GDS Q1
 U 1 1 5CF4238C
-P 3100 4050
-F 0 "Q1" H 3306 4097 50  0000 L CNN
-F 1 "Q_NMOS_GDS" H 3306 4004 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3300 4150 50  0001 C CNN
-F 3 "~" H 3100 4050 50  0001 C CNN
-	1    3100 4050
+P 2950 2750
+F 0 "Q1" V 2900 2900 50  0000 L CNN
+F 1 "Q_NMOS_GDS" V 3200 2400 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 3150 2850 50  0001 C CNN
+F 3 "~" H 2950 2750 50  0001 C CNN
+	1    2950 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1073,8 +1041,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2100 4050 50  0001 C CNN
 	1    2100 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 4050 2900 4050
 Wire Wire Line
 	2400 4050 2450 4050
 $Comp
@@ -1218,26 +1184,22 @@ Wire Wire Line
 	1750 5100 1750 4950
 Connection ~ 1750 5100
 Wire Wire Line
-	3200 4950 3200 4450
-Connection ~ 3200 4950
-Wire Wire Line
 	3000 5000 3050 5000
 Wire Wire Line
 	3050 5200 3000 5200
 $Comp
 L Device:R R5
 U 1 1 5CF42408
-P 2900 4300
-F 0 "R5" H 2830 4253 50  0000 R CNN
-F 1 "10k" H 2830 4346 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 4300 50  0001 C CNN
-F 3 "~" H 2900 4300 50  0001 C CNN
-	1    2900 4300
+P 2750 3000
+F 0 "R5" H 2680 2953 50  0000 R CNN
+F 1 "10k" H 2680 3046 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2680 3000 50  0001 C CNN
+F 3 "~" H 2750 3000 50  0001 C CNN
+	1    2750 3000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2900 4150 2900 4050
-Connection ~ 2900 4050
+	2750 2850 2750 2750
 Wire Wire Line
 	3200 5250 3200 5600
 Wire Wire Line
@@ -1262,8 +1224,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 3950 4200 3400
 Connection ~ 4200 3400
-Wire Wire Line
-	4200 3400 6500 3400
 $Comp
 L Device:R R33
 U 1 1 5D0372BE
@@ -1462,69 +1422,296 @@ F 3 "" H 6650 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9950 4450 10250 4450
-Connection ~ 10250 4450
+	9600 3150 9900 3150
 Wire Wire Line
-	10250 4450 10250 4250
+	9900 3150 9900 2950
 Wire Wire Line
-	7950 4450 7650 4450
-Connection ~ 7950 4450
+	7600 3150 7300 3150
 Wire Wire Line
-	7950 4450 7950 4250
+	7600 3150 7600 2950
 Wire Wire Line
-	5350 4450 5650 4450
-Connection ~ 5650 4450
+	5000 3150 5300 3150
 Wire Wire Line
-	5650 4450 5650 4250
+	5300 3150 5300 2950
 Wire Wire Line
-	2900 4450 3200 4450
-Connection ~ 3200 4450
+	2750 3150 3050 3150
 Wire Wire Line
-	3200 4450 3200 4250
+	3050 3150 3050 2950
 $Comp
-L power:VDD #PWR?
+L power:VDD #PWR0107
 U 1 1 5D12F5D5
-P 3200 3700
-F 0 "#PWR?" H 3200 3550 50  0001 C CNN
-F 1 "VDD" H 3217 3875 50  0000 C CNN
-F 2 "" H 3200 3700 50  0001 C CNN
-F 3 "" H 3200 3700 50  0001 C CNN
-	1    3200 3700
+P 1650 2350
+F 0 "#PWR0107" H 1650 2200 50  0001 C CNN
+F 1 "VDD" H 1667 2525 50  0000 C CNN
+F 2 "" H 1650 2350 50  0001 C CNN
+F 3 "" H 1650 2350 50  0001 C CNN
+	1    1650 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2800 4050 3150 4050
+Wire Wire Line
+	3150 4550 3200 4550
+Wire Wire Line
+	3200 4950 3200 4550
+Wire Wire Line
+	3050 3150 3450 3150
+Connection ~ 3050 3150
+Wire Wire Line
+	3450 3100 3450 3150
+Wire Wire Line
+	2750 2750 2750 2350
+Connection ~ 2750 2750
+Wire Wire Line
+	3450 2600 3450 2500
+Wire Wire Line
+	3450 2500 3050 2500
+Wire Wire Line
+	3050 2500 3050 2550
+Wire Wire Line
+	4200 3400 6500 3400
+Connection ~ 3200 4950
+Wire Wire Line
+	5250 4050 5600 4050
+Wire Wire Line
+	5600 4550 5650 4550
+Wire Wire Line
+	5650 4950 5650 4550
+Wire Wire Line
+	7550 4050 7900 4050
+Wire Wire Line
+	7900 4550 7950 4550
+Wire Wire Line
+	7950 4950 7950 4550
+Wire Wire Line
+	9850 4050 10200 4050
+Wire Wire Line
+	10200 4550 10250 4550
+Wire Wire Line
+	10250 4950 10250 4550
+Wire Wire Line
+	5300 3150 5700 3150
+Wire Wire Line
+	5700 3100 5700 3150
+Wire Wire Line
+	5700 2600 5700 2500
+Wire Wire Line
+	5700 2500 5300 2500
+Connection ~ 5300 3150
+Wire Wire Line
+	7600 3150 8000 3150
+Wire Wire Line
+	8000 3100 8000 3150
+Wire Wire Line
+	8000 2600 8000 2500
+Wire Wire Line
+	8000 2500 7600 2500
+Wire Wire Line
+	9900 3150 10300 3150
+Wire Wire Line
+	10300 3100 10300 3150
+Wire Wire Line
+	10300 2600 10300 2500
+Connection ~ 9900 3150
+Wire Wire Line
+	9900 2550 9900 2500
+Wire Wire Line
+	9900 2500 10300 2500
+Wire Wire Line
+	9600 2350 9600 2750
+Connection ~ 7600 3150
+Wire Wire Line
+	7600 2550 7600 2500
+Wire Wire Line
+	7300 2350 7300 2750
+Wire Wire Line
+	5300 2550 5300 2500
+$Comp
+L power:GND #PWR0108
+U 1 1 5D2ED679
+P 8700 1900
+F 0 "#PWR0108" H 8700 1650 50  0001 C CNN
+F 1 "GND" H 8705 1725 50  0000 C CNN
+F 2 "" H 8700 1900 50  0001 C CNN
+F 3 "" H 8700 1900 50  0001 C CNN
+	1    8700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J4
+U 1 1 5D05DE37
+P 3150 4250
+F 0 "J4" V 3154 4330 50  0000 L CNN
+F 1 "Conn_02x01" V 3245 4330 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 3150 4250 50  0001 C CNN
+F 3 "~" H 3150 4250 50  0001 C CNN
+	1    3150 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J6
+U 1 1 5D09A110
+P 5600 4250
+F 0 "J6" V 5604 4330 50  0000 L CNN
+F 1 "Conn_02x01" V 5695 4330 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 5600 4250 50  0001 C CNN
+F 3 "~" H 5600 4250 50  0001 C CNN
+	1    5600 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J8
+U 1 1 5D09A204
+P 7900 4250
+F 0 "J8" V 7904 4330 50  0000 L CNN
+F 1 "Conn_02x01" V 7995 4330 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 7900 4250 50  0001 C CNN
+F 3 "~" H 7900 4250 50  0001 C CNN
+	1    7900 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J10
+U 1 1 5D09A2DC
+P 10200 4250
+F 0 "J10" V 10204 4330 50  0000 L CNN
+F 1 "Conn_02x01" V 10295 4330 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 10200 4250 50  0001 C CNN
+F 3 "~" H 10200 4250 50  0001 C CNN
+	1    10200 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J5
+U 1 1 5D09AEEE
+P 3450 2800
+F 0 "J5" V 3454 2880 50  0000 L CNN
+F 1 "Conn_02x01" V 3545 2880 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 3450 2800 50  0001 C CNN
+F 3 "~" H 3450 2800 50  0001 C CNN
+	1    3450 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J7
+U 1 1 5D09B762
+P 5700 2800
+F 0 "J7" V 5704 2880 50  0000 L CNN
+F 1 "Conn_02x01" V 5795 2880 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 5700 2800 50  0001 C CNN
+F 3 "~" H 5700 2800 50  0001 C CNN
+	1    5700 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J9
+U 1 1 5D09B838
+P 8000 2800
+F 0 "J9" V 8004 2880 50  0000 L CNN
+F 1 "Conn_02x01" V 8095 2880 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 8000 2800 50  0001 C CNN
+F 3 "~" H 8000 2800 50  0001 C CNN
+	1    8000 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x01 J11
+U 1 1 5D09B922
+P 10300 2800
+F 0 "J11" V 10304 2880 50  0000 L CNN
+F 1 "Conn_02x01" V 10395 2880 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 10300 2800 50  0001 C CNN
+F 3 "~" H 10300 2800 50  0001 C CNN
+	1    10300 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5D0B7961
+P 2100 2600
+F 0 "J3" V 1973 2680 50  0000 L CNN
+F 1 "Conn_01x02" V 2064 2680 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 2100 2600 50  0001 C CNN
+F 3 "~" H 2100 2600 50  0001 C CNN
+	1    2100 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 2400 2000 2350
+Wire Wire Line
+	2000 2350 2100 2350
+Wire Wire Line
+	2100 2350 2100 2400
+Wire Wire Line
+	5000 2350 7300 2350
+Connection ~ 7300 2350
+Wire Wire Line
+	7300 2350 9600 2350
+Wire Wire Line
+	5000 2350 5000 2750
+Wire Wire Line
+	2100 2350 2750 2350
+Connection ~ 2100 2350
+Connection ~ 5000 2350
+Connection ~ 2750 2350
+Wire Wire Line
+	2750 2350 5000 2350
+Wire Wire Line
+	1650 2350 1750 2350
+Connection ~ 2000 2350
+$Comp
+L Connector:Screw_Terminal_01x01 J12
+U 1 1 5D11859C
+P 1750 2700
+F 0 "J12" V 1622 2779 50  0000 L CNN
+F 1 "Load +" V 1850 2600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1750 2700 50  0001 C CNN
+F 3 "~" H 1750 2700 50  0001 C CNN
+	1    1750 2700
+	0    1    1    0   
+$EndComp
+Connection ~ 1750 2350
+Wire Wire Line
+	1750 2350 2000 2350
+Wire Wire Line
+	1750 2500 1750 2350
+$Comp
+L Connector:Screw_Terminal_01x01 J13
+U 1 1 5D1271DA
+P 1250 1550
+F 0 "J13" V 1122 1629 50  0000 L CNN
+F 1 "Load -" V 1350 1450 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1250 1550 50  0001 C CNN
+F 3 "~" H 1250 1550 50  0001 C CNN
+	1    1250 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5D127496
+P 1250 1850
+F 0 "#PWR0109" H 1250 1600 50  0001 C CNN
+F 1 "GND" H 1255 1675 50  0000 C CNN
+F 2 "" H 1250 1850 50  0001 C CNN
+F 3 "" H 1250 1850 50  0001 C CNN
+	1    1250 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3200 3700 3200 3850
+	1250 1850 1250 1750
 $Comp
-L power:VDD #PWR?
-U 1 1 5D12FEAA
-P 5650 3700
-F 0 "#PWR?" H 5650 3550 50  0001 C CNN
-F 1 "VDD" H 5667 3875 50  0000 C CNN
-F 2 "" H 5650 3700 50  0001 C CNN
-F 3 "" H 5650 3700 50  0001 C CNN
-	1    5650 3700
-	1    0    0    -1  
+L Connector_Generic:Conn_01x02 J14
+U 1 1 5D135EDA
+P 2000 2050
+F 0 "J14" V 1966 1862 50  0000 R CNN
+F 1 "Conn_01x02" V 1875 1862 50  0000 R CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 2000 2050 50  0001 C CNN
+F 3 "~" H 2000 2050 50  0001 C CNN
+	1    2000 2050
+	0    -1   -1   0   
 $EndComp
-$Comp
-L power:VDD #PWR?
-U 1 1 5D12FF3B
-P 7950 3700
-F 0 "#PWR?" H 7950 3550 50  0001 C CNN
-F 1 "VDD" H 7967 3875 50  0000 C CNN
-F 2 "" H 7950 3700 50  0001 C CNN
-F 3 "" H 7950 3700 50  0001 C CNN
-	1    7950 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VDD #PWR?
-U 1 1 5D12FFCC
-P 10250 3700
-F 0 "#PWR?" H 10250 3550 50  0001 C CNN
-F 1 "VDD" H 10267 3875 50  0000 C CNN
-F 2 "" H 10250 3700 50  0001 C CNN
-F 3 "" H 10250 3700 50  0001 C CNN
-	1    10250 3700
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	2000 2250 2000 2350
+Wire Wire Line
+	2100 2350 2100 2250
 $EndSCHEMATC
